@@ -1,0 +1,22 @@
+This script does the RRD-foo for the mySmartGrid.net site.
+
+Prequisires:
+* rrdtool installed in /usr/bin/rrdtool
+* PHP 5.x with JSON extension for converting the JSON data
+
+Usage:
+
+1) Create the RRD database using
+   create_rrd.sh <rrd-database>
+
+2) Fetch the data from mysmartgrid.net and put the data into the database
+   update_rrd.sh <token> <sensor> <database>
+
+   (see update_rrd.sh help output)
+
+3) Create the chart using mkchart.sh
+   mkchart.sh <rrd-database> <output>
+
+You should put steps 2) and 3) into a crontab.
+
+
