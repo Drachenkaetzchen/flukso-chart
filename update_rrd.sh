@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 TMP=/tmp/flukso.dat
 
 if [ "$#" != "3" ]; then

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$#" != "2" ]; then
 	echo "Usage: $0 <rrd-database> <output-filename>"
