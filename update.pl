@@ -36,5 +36,6 @@ my $last = $rrd->last;
 my $json = decode_json($response->decoded_content);
 for my $data (@{$json}) {
     next if $data->[0] <= $last;
+    next if $data->[1] eq 'nan';
     $rrd->update(time => $data->[0], value => $data->[1]);
 }
